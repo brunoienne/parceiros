@@ -17,26 +17,9 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-## parceiros
+<img width="1912" height="934" alt="image" src="https://github.com/user-attachments/assets/b25306bf-3ccb-4f4a-b477-51c79efefb59" />
+<img width="1188" height="921" alt="image" src="https://github.com/user-attachments/assets/55f0c410-1d1a-4f56-8bf2-474b9cb3d8c7" />
 
-A Fiori application.
 
-### Starting the generated app
-
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  In order to launch the generated app, simply run the following from the generated app root folder:
-
-```
-    npm start
-```
-
-- It is also possible to run the application using mock data that reflects the OData Service URL supplied during application generation.  In order to run the application with Mock Data, run the following from the generated app root folder:
-
-```
-    npm run start-mock
-```
-
-#### Pre-requisites:
-
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
