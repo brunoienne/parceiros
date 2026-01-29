@@ -1,0 +1,76 @@
+<mvc:View xmlns:core="sap.ui.core"
+		controllerName="zbm.parceiros.controller.NovoParceiro"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m"
+		xmlns:f="sap.f"
+        xmlns:form="sap.ui.layout.form"
+		xmlns:layout="sap.ui.layout"
+		height="100%">
+		<f:DynamicPage id="dynamicPageId2" showFooter="true">
+			<!-- DynamicPage Title -->
+			<f:title>
+				<f:DynamicPageTitle>
+					<f:heading>
+						<Title text="Header Title"/>
+					</f:heading>
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:content>
+                 <VBox class="sapUiSmallMargin">
+                    <form:SimpleForm id="SimpleFormDisplay3542"
+                        editable="false"
+                        layout="ResponsiveGridLayout"
+                        title="Detalhes Parceiro"
+                        labelSpanXL="3"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="4"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" >
+                        <form:content>
+                            <Label text="Tipo Parceiro" />
+                             <Select items="{novoParceiro>/categorias}" change="aoEscolherCategoria">
+                                <core:Item key="{novoParceiro>PartnerType}" text="{novoParceiro>Texto}" />
+                            </Select> 
+                            <Label text="Nome 1" />
+                            <Input value="{novoParceiro>/PartnerName1}" />
+                            <Label text="Nome 2" />
+                            <Input value="{novoParceiro>/PartnerName2}" />
+                            <Label text="Termo de Pesquisa 1" />
+                            <Input value="{novoParceiro>/SearchTerm1}" />
+                            <Label text="Termo de Pesquisa 2" />
+                            <Input value="{novoParceiro>/SearchTerm2}" />
+                            <Label text="Rua" />
+                            <Input  value="{novoParceiro>/Street}" />
+                            <Label text="Nº" />
+                            <Input  value="{novoParceiro>/HouseNumber}" />
+                             <Label text="Bairro" />
+                            <Input  value="{novoParceiro>/District}" />                      
+                            <Label text="Cidade" />
+                            <Input  value="{novoParceiro>/City}" />
+                            <Label text="Estado" />
+                            <Input  value="{novoParceiro>/Region}" />            
+                            <Label text="CEP" />
+                            <Input  value="{novoParceiro>/ZipCode}" />                           
+                            <Label text="País" />
+                            <Input  value="{novoParceiro>/Country}" />
+                        </form:content>
+                    </form:SimpleForm>
+                </VBox> 
+			</f:content>
+            <f:footer>
+                <OverflowToolbar >
+                    <ToolbarSpacer />
+                    <Button id="bSave" text="Salvar"   press="aoSalvar" type="Accept"/>
+                    <Button id="bCancel" text="Cancelar" press="aoCancelar" type="Reject"/>
+                </OverflowToolbar>
+            </f:footer>
+		</f:DynamicPage>
+</mvc:View>

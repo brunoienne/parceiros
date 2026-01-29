@@ -1,0 +1,31 @@
+<mvc:View controllerName="zbm.parceiros.controller.Parceiros"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table growing="true" items="{/ParceiroSet}" id="listaParceiros" itemPress="aoSelecionarParceiro" mode="SingleSelectMaster" width="80%">
+             <headerToolbar>
+                <OverflowToolbar >
+                    <SearchField width="40%" placeholder="Nome Parceiro" liveChange="aoDigitar"></SearchField>
+                    <ToolbarSpacer/>
+                    <Button text="Criar" type="Emphasized" press="criarBP"></Button>
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Nome parceiro"/>
+                </Column>
+                                <Column>
+                    <Text text="ID"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem vAlign="Middle" type="Navigation">
+                    <cells>
+                        <Text text="{PartnerName1}"></Text>
+                        <Text text="{PartnerId}"></Text>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

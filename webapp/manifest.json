@@ -1,0 +1,185 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "zbm.parceiros",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.9.7",
+      "toolsId": "ddf2d9ea-d274-4964-a04f-97e2e6741ef6"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZBM_BP_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      },
+      "dataSourceLayout": {
+        "uri": "model/layout.json",
+        "type": "JSON"
+      },
+      "dataSourceEdicao": {
+        "uri": "model/modoedicao.json",
+        "type": "JSON"
+      },
+      "dataSourceNovoParceiro": {
+        "uri": "model/novoparceiro.json",
+        "type": "JSON"
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.144.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zbm.parceiros.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true
+      },
+      "layout": {
+        "dataSource": "dataSourceLayout",
+        "preload": true,
+        "settings": {
+          "useBatch": false
+        }
+      },
+      "modo": {
+        "dataSource": "dataSourceEdicao",
+        "preload": true,
+        "settings": {
+          "useBatch": false
+        }
+      },
+      "novoParceiro": {
+        "dataSource": "dataSourceNovoParceiro",
+        "preload": true,
+        "settings": {
+          "useBatch": false
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "zbm.parceiros.view",
+        "controlId": "fcl",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteParceiros",
+          "pattern": ":?query:",
+          "target": [
+            "TargetParceiros"
+          ]
+        },
+        {
+          "name": "RouteDetalhesParceiro",
+          "pattern": "parceiro/{PartnerId}",
+          "target": [
+            "TargetDetalheParceiro",
+            "TargetParceiros"
+          ]
+        },
+        {
+          "name": "RouteNovoParceiro",
+          "pattern": "novoparceiro/",
+          "target": [
+            "TargetNovoParceiro",
+            "TargetParceiros"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetParceiros": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Parceiros",
+          "viewName": "Parceiros",
+          "controlAggregation": "beginColumnPages"
+        },
+        "TargetDetalheParceiro": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": true,
+          "viewId": "DetalheParceiro",
+          "viewName": "DetalheParceiro",
+          "controlAggregation": "midColumnPages"
+        },
+        "TargetNovoParceiro": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": true,
+          "viewId": "NovoParceiro",
+          "viewName": "NovoParceiro",
+          "controlAggregation": "midColumnPages"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "zbm.parceiros.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

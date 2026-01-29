@@ -1,0 +1,69 @@
+<mvc:View
+		controllerName="zbm.parceiros.controller.DetalheParceiro"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m"
+		xmlns:f="sap.f"
+        xmlns:form="sap.ui.layout.form"
+		xmlns:layout="sap.ui.layout"
+		height="100%">
+		<f:DynamicPage id="dynamicPageId" showFooter="true">
+			<!-- DynamicPage Title -->
+			<f:title>
+				<f:DynamicPageTitle>
+					<f:heading>
+						<Title text="Header Title"/>
+					</f:heading>
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:content>
+                <VBox class="sapUiSmallMargin">
+                    <form:SimpleForm id="SimpleFormDisplay354"
+                        editable="false"
+                        layout="ResponsiveGridLayout"
+                        title="Detalhes Parceiro {PartnerId}"
+                        labelSpanXL="3"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="4"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" >
+                        <form:content>
+                            <Label text="Nome" />
+                            <Input value="{PartnerName1}" editable="{modo>/editavel}"/>
+                            <Label text="Termo de Pesquisa 1" />
+                            <Input value="{SearchTerm1}" editable="{modo>/editavel}"/>
+                            <Label text="Tipo" />
+                            <Input  value="{PartnerType}" editable="{modo>/editavel}"/>
+                            <Label text="Bairro" />
+                            <Input  value="{District}" editable="{modo>/editavel}"/>                               
+                            <Label text="Rua" />
+                            <Input  value="{Street}" editable="{modo>/editavel}"/>
+                            <Label text="Nº" />
+                            <Input  value="{HouseNumber}" editable="{modo>/editavel}"/>
+                            <Label text="Cidade" />
+                            <Input  value="{City}" editable="{modo>/editavel}"/>
+                            <Label text="Estado" />
+                            <Input  value="{Region}" editable="{modo>/editavel}"/>                                
+                            <Label text="País" />
+                            <Input  value="{Country}" editable="{modo>/editavel}"/>
+                        </form:content>
+                    </form:SimpleForm>
+                </VBox>
+			</f:content>
+            <f:footer>
+                <OverflowToolbar >
+                    <ToolbarSpacer />
+                    <Button id="btnEdit" text="Editar"   press="aoEditar" type="Emphasized"/>
+                    <Button id="btnSave" text="Salvar"   press="aoSalvar" type="Accept" visible="false"/>
+                    <Button id="btnCancel" text="Cancelar" press="aoCancelar" type="Reject" visible="false"/>
+                </OverflowToolbar>
+            </f:footer>
+		</f:DynamicPage>
+</mvc:View>

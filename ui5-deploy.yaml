@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.6"
+metadata:
+  name: zbm.parceiros
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: https://cromos.opus-idc.com.br:44300/
+        app:
+          name: ZBM_BP
+          description: ""
+          package: $TMP
+          transport: S4DK900568
+        exclude:
+          - /test/
