@@ -17,8 +17,10 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-<img width="1912" height="934" alt="image" src="https://github.com/user-attachments/assets/b25306bf-3ccb-4f4a-b477-51c79efefb59" />
-<img width="1188" height="921" alt="image" src="https://github.com/user-attachments/assets/55f0c410-1d1a-4f56-8bf2-474b9cb3d8c7" />
+<img width="1588" height="778" alt="image" src="https://github.com/user-attachments/assets/37f7dcd1-04dc-45ee-8468-05ab548f9f3c" />
+
+<img width="1916" height="934" alt="image" src="https://github.com/user-attachments/assets/d7ad4dbc-d23b-478e-8ff3-dbdb578c7c60" />
+
 
 
 
