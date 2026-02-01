@@ -20,7 +20,7 @@
                     <form:SimpleForm id="SimpleFormDisplay354"
                         editable="false"
                         layout="ResponsiveGridLayout"
-                        title="Detalhes Parceiro {PartnerId}"
+                        title="Partner Details {PartnerId}"
                         labelSpanXL="3"
                         labelSpanL="3"
                         labelSpanM="3"
@@ -35,23 +35,23 @@
                         columnsM="1"
                         singleContainerFullSize="false" >
                         <form:content>
-                            <Label text="Nome" />
+                            <Label text="Name" />
                             <Input value="{PartnerName1}" editable="{modo>/editavel}"/>
-                            <Label text="Termo de Pesquisa 1" />
+                            <Label text="Search Term 1" />
                             <Input value="{SearchTerm1}" editable="{modo>/editavel}"/>
-                            <Label text="Tipo" />
+                            <Label text="Partner Type" />
                             <Input  value="{PartnerType}" editable="{modo>/editavel}"/>
-                            <Label text="Bairro" />
+                            <Label text="District" />
                             <Input  value="{District}" editable="{modo>/editavel}"/>                               
-                            <Label text="Rua" />
+                            <Label text="Street" />
                             <Input  value="{Street}" editable="{modo>/editavel}"/>
                             <Label text="Nº" />
                             <Input  value="{HouseNumber}" editable="{modo>/editavel}"/>
-                            <Label text="Cidade" />
+                            <Label text="City" />
                             <Input  value="{City}" editable="{modo>/editavel}"/>
-                            <Label text="Estado" />
+                            <Label text="Region" />
                             <Input  value="{Region}" editable="{modo>/editavel}"/>                                
-                            <Label text="País" />
+                            <Label text="Country" />
                             <Input  value="{Country}" editable="{modo>/editavel}"/>
                         </form:content>
                     </form:SimpleForm>
@@ -60,9 +60,9 @@
             <f:footer>
                 <OverflowToolbar >
                     <ToolbarSpacer />
-                    <Button id="btnEdit" text="Editar"   press="aoEditar" type="Emphasized"/>
-                    <Button id="btnSave" text="Salvar"   press="aoSalvar" type="Accept" visible="false"/>
-                    <Button id="btnCancel" text="Cancelar" press="aoCancelar" type="Reject" visible="false"/>
+                    <Button id="btnEdit" text="Edit"   press="aoEditar" type="Emphasized"/>
+                    <Button id="btnSave" text="Save"   press="aoSalvar" type="Accept" visible="false"/>
+                    <Button id="btnCancel" text="Cancel" press="aoCancelar" type="Reject" visible="false"/>
                 </OverflowToolbar>
             </f:footer>
 		</f:DynamicPage>

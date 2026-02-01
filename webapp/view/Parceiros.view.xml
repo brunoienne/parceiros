@@ -5,14 +5,14 @@
         <Table growing="true" items="{/ParceiroSet}" id="listaParceiros" itemPress="aoSelecionarParceiro" mode="SingleSelectMaster" width="80%">
              <headerToolbar>
                 <OverflowToolbar >
-                    <SearchField width="40%" placeholder="Nome Parceiro" liveChange="aoDigitar"></SearchField>
+                    <SearchField width="40%" placeholder="Partner Name" liveChange="aoDigitar"></SearchField>
                     <ToolbarSpacer/>
-                    <Button text="Criar" type="Emphasized" press="criarBP"></Button>
+                    <Button text="Create" type="Emphasized" press="criarBP"></Button>
                 </OverflowToolbar>
             </headerToolbar>
             <columns>
                 <Column>
-                    <Text text="Nome parceiro"/>
+                    <Text text="Partner name"/>
                 </Column>
                                 <Column>
                     <Text text="ID"/>

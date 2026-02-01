@@ -20,7 +20,7 @@
                     <form:SimpleForm id="SimpleFormDisplay3542"
                         editable="false"
                         layout="ResponsiveGridLayout"
-                        title="Detalhes Parceiro"
+                        title="Partner details"
                         labelSpanXL="3"
                         labelSpanL="3"
                         labelSpanM="3"
@@ -35,31 +35,31 @@
                         columnsM="1"
                         singleContainerFullSize="false" >
                         <form:content>
-                            <Label text="Tipo Parceiro" />
+                            <Label text="Partner type" />
                              <Select items="{novoParceiro>/categorias}" change="aoEscolherCategoria">
                                 <core:Item key="{novoParceiro>PartnerType}" text="{novoParceiro>Texto}" />
                             </Select> 
-                            <Label text="Nome 1" />
+                            <Label text="Name 1" />
                             <Input value="{novoParceiro>/PartnerName1}" />
-                            <Label text="Nome 2" />
+                            <Label text="Name 2" />
                             <Input value="{novoParceiro>/PartnerName2}" />
-                            <Label text="Termo de Pesquisa 1" />
+                            <Label text="Search Term 1" />
                             <Input value="{novoParceiro>/SearchTerm1}" />
-                            <Label text="Termo de Pesquisa 2" />
+                            <Label text="Search Term 2" />
                             <Input value="{novoParceiro>/SearchTerm2}" />
-                            <Label text="Rua" />
+                            <Label text="Street" />
                             <Input  value="{novoParceiro>/Street}" />
                             <Label text="Nº" />
                             <Input  value="{novoParceiro>/HouseNumber}" />
-                             <Label text="Bairro" />
+                             <Label text="District" />
                             <Input  value="{novoParceiro>/District}" />                      
-                            <Label text="Cidade" />
+                            <Label text="City" />
                             <Input  value="{novoParceiro>/City}" />
-                            <Label text="Estado" />
+                            <Label text="Region" />
                             <Input  value="{novoParceiro>/Region}" />            
-                            <Label text="CEP" />
+                            <Label text="Zip Code" />
                             <Input  value="{novoParceiro>/ZipCode}" />                           
-                            <Label text="País" />
+                            <Label text="Country" />
                             <Input  value="{novoParceiro>/Country}" />
                         </form:content>
                     </form:SimpleForm>
@@ -68,8 +68,8 @@
             <f:footer>
                 <OverflowToolbar >
                     <ToolbarSpacer />
-                    <Button id="bSave" text="Salvar"   press="aoSalvar" type="Accept"/>
-                    <Button id="bCancel" text="Cancelar" press="aoCancelar" type="Reject"/>
+                    <Button id="bSave" text="Save"   press="aoSalvar" type="Accept"/>
+                    <Button id="bCancel" text="Cancel" press="aoCancelar" type="Reject"/>
                 </OverflowToolbar>
             </f:footer>
 		</f:DynamicPage>
